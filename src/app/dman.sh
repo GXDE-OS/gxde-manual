@@ -1,3 +1,3 @@
 #!/bin/sh
 
-/usr/share/deepin-manual/dman $@
+/usr/share/gxde-manual/dman $@

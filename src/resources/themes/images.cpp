@@ -19,6 +19,6 @@
 
 namespace dman {
 
-const char kImageDeepinManual[] = ":/common/images/deepin-manual.svg";
+const char kImageDeepinManual[] = ":/common/images/gxde-manual.svg";
 
 }  // namespace dman

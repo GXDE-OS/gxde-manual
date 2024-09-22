@@ -1,4 +1,4 @@
-# Desktop Environment|../common/deepin-system.svg|
+# GXDE Desktop Environment|../common/deepin-system.svg|
 
 ## Overview
 deepin is an elegant, easy to use and reliable Linux desktop operating system developed by Deepin Technology Co., Ltd. WPS Office, Text Editor, Google Chrome and other deepin featured applications have been preinstalled. It allows you to experience a variety of recreational activities, but also to meet your daily needs. With continually improved and perfected functions, we believe deepin will be loved and used by more and more users.

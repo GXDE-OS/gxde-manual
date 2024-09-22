@@ -1,6 +1,6 @@
 Format: http://dep.debian.net/deps/dep5
-Upstream-Name: deepin-manual
-Source: https://github.com/linuxdeepin/deepin-manual
+Upstream-Name: gxde-manual
+Source: https://github.com/linuxdeepin/gxde-manual
 
 Files: *
 Copyright: Deepin Technology Co., Ltd.

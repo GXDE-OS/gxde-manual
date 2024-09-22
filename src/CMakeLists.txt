@@ -1,4 +1,4 @@
-project(deepin-manual C CXX)
+project(gxde-manual C CXX)
 
 #set(CMAKE_C_COMPILER  /usr/bin/clang)
 #set(CMAKE_CXX_COMPILER  /usr/bin/clang++)
@@ -8,9 +8,9 @@ if (CMAKE_BUILD_TYPE MATCHES Debug)
   add_definitions(-DDMAN_WEB_DIR="${CMAKE_CURRENT_SOURCE_DIR}/web_dist")
   add_definitions(-DDMAN_MANUAL_DIR="${CMAKE_SOURCE_DIR}/manual")
 else()
-  add_definitions(-DDMAN_SEARCH_DB="${CMAKE_INSTALL_PREFIX}/share/deepin-manual/search.db")
-  add_definitions(-DDMAN_WEB_DIR="${CMAKE_INSTALL_PREFIX}/share/deepin-manual/web_dist")
-  add_definitions(-DDMAN_MANUAL_DIR="${CMAKE_INSTALL_PREFIX}/share/deepin-manual/manual")
+  add_definitions(-DDMAN_SEARCH_DB="${CMAKE_INSTALL_PREFIX}/share/gxde-manual/search.db")
+  add_definitions(-DDMAN_WEB_DIR="${CMAKE_INSTALL_PREFIX}/share/gxde-manual/web_dist")
+  add_definitions(-DDMAN_MANUAL_DIR="${CMAKE_INSTALL_PREFIX}/share/gxde-manual/manual")
 endif ()
 # These macros ared used at compile time only.
 add_definitions(-DDMAN_SEARCH_ORIG_DB="${CMAKE_CURRENT_BINARY_DIR}/search.db")
@@ -180,7 +180,7 @@ add_dependencies(update-search-db
 
 # Generate .qm files from .ts files.
 file(GLOB DMAN_TRANSLATION_TS
-     ${CMAKE_SOURCE_DIR}/translations/deepin-manual*.ts)
+     ${CMAKE_SOURCE_DIR}/translations/gxde-manual*.ts)
 set_source_files_properties(${DMAN_TRANSLATION_TS}
                             PROPERTIES OUTPUT_LOCATION ${CMAKE_BINARY_DIR}/translations)
 qt5_add_translation(DMAN_TRANSLATION_QM ${DMAN_TRANSLATION_TS})
@@ -250,7 +250,7 @@ endif ()
 
 ## Installation
 install(TARGETS dman
-        DESTINATION ${CMAKE_INSTALL_PREFIX}/share/deepin-manual)
+        DESTINATION ${CMAKE_INSTALL_PREFIX}/share/gxde-manual)
 # NOTE(Shaohua): Add this script to by pass platform plugin issue in Qt.
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/app/dman.sh
         DESTINATION ${CMAKE_INSTALL_PREFIX}/bin
@@ -262,13 +262,13 @@ install(TARGETS dman-search
         DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
 
 install(DIRECTORY ${CMAKE_BINARY_DIR}/translations
-        DESTINATION ${CMAKE_INSTALL_PREFIX}/share/deepin-manual)
+        DESTINATION ${CMAKE_INSTALL_PREFIX}/share/gxde-manual)
 
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/manual
-        DESTINATION ${CMAKE_INSTALL_PREFIX}/share/deepin-manual)
+        DESTINATION ${CMAKE_INSTALL_PREFIX}/share/gxde-manual)
 
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/web_dist
-        DESTINATION ${CMAKE_INSTALL_PREFIX}/share/deepin-manual)
+        DESTINATION ${CMAKE_INSTALL_PREFIX}/share/gxde-manual)
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/search.db
-        DESTINATION ${CMAKE_INSTALL_PREFIX}/share/deepin-manual)
+        DESTINATION ${CMAKE_INSTALL_PREFIX}/share/gxde-manual)

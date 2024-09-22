@@ -1,4 +1,4 @@
-# Deepin Manual
+# GXDE Manual
 
 ## For packagers
 

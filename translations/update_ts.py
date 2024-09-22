@@ -45,7 +45,7 @@ def main():
         print("Run script in parent folder of `translations`")
         sys.exit(1)
     
-    default_ts = "translations/deepin-manual.ts"
+    default_ts = "translations/gxde-manual.ts"
     generate_ts(default_ts, True)
 
 if __name__ == "__main__":

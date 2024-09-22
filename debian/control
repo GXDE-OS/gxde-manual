@@ -1,4 +1,4 @@
-Source: deepin-manual
+Source: gxde-manual
 Maintainer: Deepin Sysdev <sysdev@deepin.com>
 Section: python
 Priority: optional
@@ -8,19 +8,17 @@ Build-Depends:
  debhelper (>= 9),
  git,
  libqcef-dev,
- libdtkwidget-dev,
+ libdtkwidget2-dev,
  libqt5webchannel5-dev,
- libsass0,
+ libsass-dev,
  libqt5sql5-sqlite,
  pkg-config,
  qttools5-dev,
  qttools5-dev-tools,
 Standards-Version: 3.9.5
-Homepage: https://github.com/linuxdeepin/deepin-manual/
-Vcs-Git: git://github.com/linuxdeepin/deepin-manual.git
-Vcs-Browser: https://github.com/linuxdeepin/deepin-manual/
+Homepage: https://gitee.com/GXDE-OS/gxde-manual/
 
-Package: deepin-manual
+Package: gxde-manual
 Architecture: any
 Depends: ${misc:Depends},
  ${shlibs:Depends},
@@ -28,7 +26,7 @@ Depends: ${misc:Depends},
  libqt5dbus5,
  libqt5sql5-sqlite,
 Recommends: qt5dxcb-plugin,
-Conflicts: dde-help
-Provides: dde-help
+Conflicts: dde-help, deepin-manual
+Provides: dde-help, deepin-manual
 Description: Deepin Manual
  Deepin User Manual

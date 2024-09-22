@@ -21,6 +21,7 @@
 #include <QDBusConnection>
 #include <QIcon>
 #include <qcef_context.h>
+#include <QTimer>
 
 #include "base/consts.h"
 #include "controller/argument_parser.h"
@@ -67,18 +68,18 @@ int main(int argc, char** argv) {
   app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
   app.setWindowIcon(QIcon(dman::kImageDeepinManual));
   app.setProductIcon(QIcon(dman::kImageDeepinManual));
-  app.setOrganizationName("deepin");
-  app.setOrganizationDomain("deepin.org");
+  app.setOrganizationName("GXDE");
+  app.setOrganizationDomain("gxde.top");
   app.setApplicationVersion(dman::kAppVersion);
   app.setApplicationName(dman::kAppName);
   app.loadTranslator();
-  app.setApplicationDisplayName(QObject::tr("Deepin Manual"));
+  app.setApplicationDisplayName(QObject::tr("GXDE Manual"));
   app.setApplicationDescription(QObject::tr(
-      "Deepin Manual is designed to help users learn deepin and "
-          "Deepin applications, providing specific instructions and "
+      "GXDE Manual is designed to help users learn GXDE and "
+          "GXDE applications, providing specific instructions and "
           "function descriptions."));
   app.setApplicationAcknowledgementPage(
-      "https://www.deepin.org/acknowledgments/deepin-manual/");
+      "https://gitee.com/GXDE-OS/gxde-manual");
 
   Dtk::Core::DLogManager::registerFileAppender();
   Dtk::Core::DLogManager::registerConsoleAppender();
